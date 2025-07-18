@@ -1,3 +1,4 @@
+
 base_model: runwayml/stable-diffusion-v1-5
 controlnet_conditioning: canny
 resolution: 512
