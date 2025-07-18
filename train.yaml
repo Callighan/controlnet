@@ -1,0 +1,19 @@
+base_model: runwayml/stable-diffusion-v1-5
+controlnet_conditioning: canny
+resolution: 512
+image_size: 512
+lora: true
+
+dataset:
+  url: https://drive.google.com/uc?id=1PsKCnCNS1HhLb12JUUuDBvNhx_ZcpLbN&export=download
+  input_folder: canny
+  target_folder: images
+
+train:
+  steps: 1600
+  learning_rate: 1e-4
+  batch_size: 4
+  gradient_accumulation_steps: 1
+
+prompt_template: "a black-and-white line drawing of a young man in pose: {caption}"
+output_dir: /output
